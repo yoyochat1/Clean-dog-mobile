@@ -1,3 +1,4 @@
+/* Couleurs réutilisées sur tout le site. */
 :root {
     --bleu-nuit: #14235A;
     --bleu: #1F3C9E;
@@ -7,10 +8,12 @@
     --blanc: #FFFFFF;
 }
 
+/* Les tailles incluent aussi les bordures et les marges intérieures. */
 * {
     box-sizing: border-box;
 }
 
+/* Style général des pages : fond, texte et espace pour le bas de page. */
 body {
     margin: 0;
     min-height: 100vh;
@@ -22,6 +25,7 @@ body {
     line-height: 1.65;
 }
 
+/* Grand titre du haut de page. */
 .titre {
     display: flex;
     align-items: center;
@@ -38,6 +42,7 @@ body {
     text-align: center;
 }
 
+/* Taille et place de la petite image dans le titre. */
 .mascotte-entete {
     width: 56px;
     height: 56px;
@@ -45,6 +50,7 @@ body {
     object-fit: contain;
 }
 
+/* Décoration en forme de traces de pattes derrière le titre. */
 .titre::after {
     content: "";
     position: absolute;
@@ -58,6 +64,7 @@ body {
     opacity: 0.9;
 }
 
+/* Titre placé au-dessus du contenu de chaque page. */
 .sous-titre {
     width: 90%;
     max-width: 1100px;
@@ -71,6 +78,7 @@ body {
     line-height: 1.35;
 }
 
+/* Menu principal : liens centrés et répartis sur plusieurs lignes si besoin. */
 .navigation {
     display: flex;
     justify-content: center;
@@ -80,6 +88,7 @@ body {
     background: var(--bleu-nuit);
 }
 
+/* Numéro de téléphone affiché sous le titre. */
 .telephone-entete {
     display: block;
     padding: 8px 16px;
@@ -90,11 +99,13 @@ body {
     text-decoration: none;
 }
 
+/* Souligne le numéro quand on le survole ou le sélectionne au clavier. */
 .telephone-entete:hover,
 .telephone-entete:focus {
     text-decoration: underline;
 }
 
+/* Style partagé par les liens du menu et du pied de page. */
 .navigation a,
 .pied-page a {
     display: inline-block;
@@ -104,6 +115,7 @@ body {
     text-decoration: none;
 }
 
+/* Change le fond des liens au survol ou quand on les sélectionne. */
 .navigation a:hover,
 .navigation a:focus,
 .pied-page a:hover,
@@ -112,24 +124,29 @@ body {
     text-decoration: underline;
 }
 
+/* Marque le lien de la page actuelle dans le menu. */
 .navigation a[aria-current="page"] {
     box-shadow: inset 0 -4px 0 #F7C51E;
 }
 
+/* Marque le lien actuel si le pied de page en contient un. */
 .pied-page a[aria-current="page"] {
     box-shadow: inset 0 -4px 0 #F7C51E;
 }
 
+/* Centre le contenu des pages et limite sa largeur sur les grands écrans. */
 .contenu-page {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
+/* Le sous-titre prend toute la largeur de la zone de contenu. */
 .contenu-page .sous-titre {
     width: 100%;
 }
 
+/* Carte blanche utilisée pour présenter des informations. */
 .carte {
     margin: 16px 0;
     padding: 20px;
@@ -137,11 +154,13 @@ body {
     border-radius: 8px;
 }
 
+/* Titre à l'intérieur d'une carte. */
 .carte h3 {
     margin-top: 0;
     color: #14235A;
 }
 
+/* Liens faciles à repérer dans les cartes et les paragraphes. */
 .carte a:not(.bouton-appel),
 .paragraphe a {
     color: #14235A;
@@ -149,6 +168,7 @@ body {
     text-decoration: underline;
 }
 
+/* Grand bouton pour appeler, avec son texte centré. */
 .bouton-appel {
     display: flex;
     flex-direction: column;
@@ -165,6 +185,7 @@ body {
     text-decoration: none;
 }
 
+/* Texte d'introduction au-dessus du numéro d'appel. */
 .appel-intro {
     margin-top: 0;
     font-size: 22px;
@@ -172,53 +193,63 @@ body {
     text-align: center;
 }
 
+/* Texte qui présente le numéro de téléphone. */
 .appel-legende {
     font-size: 18px;
     text-transform: uppercase;
 }
 
+/* Numéro de téléphone affiché en grand. */
 .numero-telephone {
     font-size: 42px;
     line-height: 1.2;
 }
 
+/* Le bouton d'appel change de couleur au survol ou à la sélection. */
 .bouton-appel:hover,
 .bouton-appel:focus {
     background: #F7C51E;
 }
 
+/* Contour visible quand le bouton est sélectionné au clavier. */
 .bouton-appel:focus-visible {
     outline: 3px solid #14235A;
     outline-offset: 4px;
 }
 
+/* Aère les étapes et les listes dans les cartes. */
 .etapes-reservation li,
 .carte li {
     margin-bottom: 8px;
     padding-left: 4px;
 }
 
+/* Met en évidence les numéros des étapes. */
 .etapes-reservation li::marker {
     color: #1F3C9E;
     font-weight: bold;
 }
 
+/* Bloc qui met en avant les informations pratiques. */
 .informations-pratiques {
     padding: 12px 16px;
     border-left: 5px solid #F7C51E;
     background: #EEF2FB;
 }
 
+/* Bloc qui signale une note à compléter. */
 .note-a-completer {
     padding: 14px 18px;
     border-left: 5px solid #F7C51E;
     background: #FFFFFF;
 }
 
+/* Ajoute de l'espace autour de la liste des questions fréquentes. */
 .faq-liste {
     margin: 16px 0;
 }
 
+/* Présente chaque question fréquente dans une carte. */
 .faq-item {
     margin: 12px 0;
     padding: 16px 20px;
@@ -227,6 +258,7 @@ body {
     background: #FFFFFF;
 }
 
+/* Rend les questions plus visibles et indique qu'on peut cliquer dessus. */
 .faq-item summary {
     color: #14235A;
     font-size: 18px;
@@ -234,14 +266,17 @@ body {
     cursor: pointer;
 }
 
+/* Colore la flèche qui ouvre ou ferme une question. */
 .faq-item summary::marker {
     color: #1F3C9E;
 }
 
+/* Évite un espace en trop après la réponse. */
 .faq-item p {
     margin-bottom: 0;
 }
 
+/* Barre du bas : centre les liens et passe à la ligne si nécessaire. */
 .pied-page {
     display: flex;
     justify-content: center;
@@ -252,12 +287,15 @@ body {
     background: var(--bleu);
 }
 
-.copyright {
+/* Texte du copyright et noms des personnes qui ont créé le site. */
+.copyright,
+.credits {
     display: inline-block;
     padding: 8px 14px;
     color: #FFFFFF;
 }
 
+/* Bloc blanc pour le texte courant, centré et limité en largeur. */
 .paragraphe {
     width: 90%;
     max-width: 1100px;
@@ -268,6 +306,7 @@ body {
     color: #14235A;
 }
 
+/* Image centrée, adaptée à l'écran et encadrée. */
 .image {
     display: block;
     width: 90%;
@@ -280,6 +319,7 @@ body {
     object-fit: cover;
 }
 
+/* Logo centré, avec une taille limitée. */
 .logo {
     display: block;
     width: min(80%, 320px);
@@ -287,11 +327,13 @@ body {
     margin: 8px auto 24px;
 }
 
+/* Espacement et alignement du texte d'introduction d'une page. */
 .intro-page {
     margin: 16px 0 24px;
     text-align: center;
 }
 
+/* Présente les prestations et les arguments sous forme de grille. */
 .prestation-grille,
 .arguments-grille {
     display: grid;
@@ -300,6 +342,7 @@ body {
     margin: 24px 0;
 }
 
+/* Apparence des cartes de prestation et des arguments. */
 .prestation-carte,
 .argument-carte {
     padding: 20px;
@@ -308,16 +351,19 @@ body {
     box-shadow: 0 8px 20px rgb(20 35 90 / 10%);
 }
 
+/* Espacement des titres dans les cartes. */
 .prestation-carte h3,
 .argument-carte h3 {
     margin: 12px 0 8px;
 }
 
+/* Retire la marge sous le texte des cartes. */
 .prestation-carte p,
 .argument-carte p {
     margin: 0;
 }
 
+/* Zone de fond derrière chaque illustration de prestation. */
 .prestation-visuel {
     display: grid;
     min-height: 160px;
@@ -326,6 +372,7 @@ body {
     background: #EEF2FB;
 }
 
+/* Taille de l'illustration, sans la déformer. */
 .prestation-illustration {
     display: block;
     width: 180px;
@@ -334,6 +381,7 @@ body {
     object-fit: contain;
 }
 
+/* Affiche le numéro d'un argument dans un cercle. */
 .argument-numero {
     display: inline-grid;
     width: 42px;
@@ -345,6 +393,7 @@ body {
     font-weight: bold;
 }
 
+/* Bandeau coloré qui annonce les races de chiens acceptées. */
 .bandeau-races {
     margin: 28px 0;
     padding: 18px;
@@ -355,60 +404,74 @@ body {
     text-align: center;
 }
 
+/* Retire l'espace au-dessus du titre de la partie expérience. */
 .experience h2 {
     margin-top: 0;
 }
 
+/* Le bouton d'appel mobile reste caché sur les grands écrans. */
 .appel-mobile {
     display: none;
 }
 
+/* Ajustements pour les écrans de téléphone. */
 @media (max-width: 600px) {
+    /* Réserve de la place en bas pour le bouton d'appel fixe. */
     body {
         padding-bottom: calc(88px + env(safe-area-inset-bottom));
     }
 
+    /* Réduit le titre pour qu'il tienne sur un petit écran. */
     .titre {
         gap: 8px;
         padding: 16px 12px;
         font-size: 32px;
     }
 
+    /* Réduit la mascotte dans le titre sur téléphone. */
     .mascotte-entete {
         width: 40px;
         height: 40px;
     }
 
+    /* Rend la décoration moins visible sur le petit écran. */
     .titre::after {
         opacity: 0.35;
     }
 
+    /* Garde les blocs de contenu à une largeur confortable. */
     .sous-titre,
     .paragraphe,
     .contenu-page {
         width: 90%;
     }
 
+    /* Réduit la taille des sous-titres sur téléphone. */
     .sous-titre {
         font-size: 22px;
     }
 
+    /* Adapte les marges intérieures du bouton d'appel. */
     .bouton-appel {
         padding: 16px 12px;
     }
 
+    /* Réduit le numéro pour qu'il ne déborde pas de l'écran. */
     .numero-telephone {
         font-size: 34px;
     }
 
+    /* Réduit le texte d'introduction de l'appel. */
     .appel-intro {
         font-size: 19px;
     }
 
+    /* Réduit l'espace intérieur des cartes. */
     .carte {
         padding: 16px;
     }
 
+    /* Affiche un bouton d'appel fixe en bas de l'écran du téléphone. */
     .appel-mobile {
         position: fixed;
         z-index: 10;
@@ -426,6 +489,7 @@ body {
         text-decoration: none;
     }
 
+    /* Rend le bouton mobile repérable quand on le sélectionne au clavier. */
     .appel-mobile:focus-visible {
         outline: 3px solid var(--bleu-nuit);
         outline-offset: 3px;
